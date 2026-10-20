@@ -18,5 +18,5 @@ This project also includes the clinical parameter data obtained from the NCBI Ge
 The clinical variables extracted from the clinical parameter data are the Relapse status and the ER status.
 
 ## To get started:
-1. Download the data files provided.
-2. Run the EDA_Report file to quality control the data, and join the necessary columns into one comprehensive dataframe. 
+1. Download the data files provided. (All files that begin with GSE_2034)
+3. Run the EDA_Report file to quality control the data, and join the necessary columns into one comprehensive dataframe. 

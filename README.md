@@ -19,4 +19,4 @@ The clinical variables extracted from the clinical parameter data are the Relaps
 
 ## To get started:
 1. Download the data files provided. (All files that begin with GSE_2034)
-3. Run the EDA_Report file to quality control the data, and join the necessary columns into one comprehensive dataframe. 
+3. Run the EDA_Report file to review the Exploratory Analysis, quality control the probe data, and join the necessary columns into one comprehensive dataframe. 

@@ -12,10 +12,11 @@ Can a machine learning model trained on gene expression data from the GSE2034 br
 ### Background
 Gene expression profiling allows researchers to examine patterns of gene activity across thousands of measurements. These patterns may contain information associated with clinical outcomes and prognosis. However, gene expression data is high dimensional, with the dataset in this project containing over 22k probes(features). This poses several analytical challenges, many more features than samples, class imbalance, correlated predictors, and risk of overfitting. This project explores approaches for addressing these challenges while evaluating the potential predictive value of gene expression data.
 
-### Data and Provenance
-The original dataset comes from a research paper from The Lancet entitled ‘Gene-expression profiles to predict distant metastasis of lymph-node-negative primary breast cancer’. The data used in this project comes from the Kaggle Breast Cancer Gene Expression Dataset (GSE2034). It is CC0 1.0 Universal, meaning the data is public domain. <br>
-This project also includes the clinical parameter data obtained from the NCBI Geo Omnibus platform, which is also public domain. 
-The clinical variables extracted from the clinical parameter data are the Relapse status and the ER status.
+### Data Source and Licensing
+This project uses the GSE2034 breast cancer gene-expression dataset, obtained from the Kaggle dataset Breast Cancer Gene Expression Dataset (GSE2034), which is marked CC0 1.0 Public Domain on Kaggle.
+The original study and dataset are available through NCBI Gene Expression Omnibus (GSE2034). Please consult the original GEO record and publication for source information and appropriate attribution.
+This project is an independent educational analysis and is not a clinical diagnostic tool.
+
 
 ## To get started:
 1. Download the data files provided. (All files that begin with GSE_2034)

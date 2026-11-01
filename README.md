@@ -27,6 +27,20 @@ The project has two main components:
 2. Predictive Modelling and External Validation: This includes applying feature selection techniques to identify informative gene-expression features, developing a classifier, evaluating the models performance, and asesssing generalizability using an external and independent dataset.
 
 
-## To get started:
-1. Download the data files provided. (All files that begin with GSE_2034)
-3. Run the EDA_Report file to review the Exploratory Analysis, quality control the probe data, and join the necessary columns into one comprehensive dataframe. 
+## Getting Started:
+####Explore the Interactive Dashboard
+The project includes a publicly accessible Streamlit dashboard that allows users to explore breast cancer gene-expression data and investigate patterns associated with relapse.
+
+**[Launch the Interactive Dashboard](https://gse2034-breast-cancer-relapse.streamlit.app/)**
+
+No installation or technical setup is required.
+
+####Running the project locally (for technical reviewers)
+- Python 3.9 or later
+- Git
+- Code editor (such as VS code)
+1. Clone this repository: git clone https://github.com/saranenada-cell/GeneExpressionBreastCancerRelapse.git
+cd GeneExpressionBreastCancerRelapse
+2. Create Virtual Environment
+3. Install Dependencies: pip install -r requirements.txt
+4. Launch Interactive Dashboard: streamlit run app.py

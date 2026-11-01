@@ -14,4 +14,5 @@ __pycache__/
 # Local data files (optional)
 data/*.csv
 !data/dashboard_dataset.csv
+!data/GSE2034_family_platform_GPL96_annotation.csv
 data/*.txt

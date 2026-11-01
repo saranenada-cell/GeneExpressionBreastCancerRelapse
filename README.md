@@ -27,12 +27,6 @@ The project has two main components:
 2. Predictive Modelling and External Validation: This includes applying feature selection techniques to identify informative gene-expression features, developing a classifier, evaluating the models performance, and asesssing generalizability using an external and independent dataset.
 
 
-### Data Source and Licensing
-This project uses the GSE2034 breast cancer gene-expression dataset, obtained from the Kaggle dataset Breast Cancer Gene Expression Dataset (GSE2034), which is marked CC0 1.0 Public Domain on Kaggle.
-The original study and dataset are available through NCBI Gene Expression Omnibus (GSE2034). Please consult the original GEO record and publication for source information and appropriate attribution.
-This project is an independent educational analysis and is not a clinical diagnostic tool.
-
-
 ## To get started:
 1. Download the data files provided. (All files that begin with GSE_2034)
 3. Run the EDA_Report file to review the Exploratory Analysis, quality control the probe data, and join the necessary columns into one comprehensive dataframe. 

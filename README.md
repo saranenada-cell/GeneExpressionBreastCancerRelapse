@@ -1,5 +1,8 @@
-# GeneExpressionBreastCancerRelapse
-Project Status: In Progress
+# Gene Expression Analysis and Breast Cancer Relapse Prediction
+
+**[View Live Interactive Dashboard](https://gse2034-breast-cancer-relapse.streamlit.app/)**
+
+**Project Status:** In Progress
 ## Project Overview
 This project investigates whether gene expression can help distinguish breast cancer patients who experienced relapse from those who did not. Using the publicaly available GSE2034 dataset, the project applies statistical analysis and machine learning techniques to develop and evaluate a predictive model on it's ability to predict relapse versus relapse free based on gene expression values. <br>
 

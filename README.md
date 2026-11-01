@@ -8,8 +8,17 @@ This project explores gene expression patterns associated with breast cancer rel
 The project includes data preprocessing, exploratory data analysis, statistical testing, and an interactive Streamlit dashboard. The dashboard allows users to examine gene annotations, compare expression levels across relapse groups, and explore statistically significant differences. <br>
 **Project Status:** In Progress
 
-### Research Question
-Can a machine learning model trained on gene expression data from the GSE2034 breast cancer cohort predict relapse status, and how well does this predictive performance generalize to an independent dataset?
+### Dataset Description
+Source: Kaggle dataset containing a copy of the GSE2034 breast cancer gene-expression dataset.
+- Dataset: GSE2034 - Breast Cancer relapse-free survival
+- Primary Repository: NCBI Gene Expression Omnibus (GEO)
+- GEO accession: GSE2034
+- Publication status: Publicly available as of February 23, 2005
+- Original Study: Wang et al., Gene-expression profiles to predict distant metastasis of lymph-node-negative primary breast cancer
+- Original Expression Data: 22,283 microarray probe measurements
+- Analysis Cohort: 286 primary breast tumour samples after merging expression and clinical data
+- Clinical Information: Relapse status, time to relapse or last follow-up, lymph-node status, ER status, and other recurrence-related variables
+- License: CC0 1.0 Universal (public domain dedication)
 
 ### Background
 Gene expression profiling allows researchers to examine patterns of gene activity across thousands of measurements. These patterns may contain information associated with clinical outcomes and prognosis. However, gene expression data is high dimensional, with the dataset in this project containing over 22k probes(features). This poses several analytical challenges, many more features than samples, class imbalance, correlated predictors, and risk of overfitting. This project explores approaches for addressing these challenges while evaluating the potential predictive value of gene expression data.

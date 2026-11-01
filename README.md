@@ -46,8 +46,8 @@ cd GeneExpressionBreastCancerRelapse
 2. Create Virtual Environment
 3. Install Dependencies: pip install -r requirements.txt
 4. Launch Interactive Dashboard: streamlit run app.py
-5. Reproduce Data Preprocessing
+5. Reproduce Data Preprocessing <br>
 The prepare_data.py script contains the preprocessing workflow used to generate the dashboard dataset. <br>
 The repository includes the processed dataset and GPL96 platform annotation file required by the dashboard. To reproduce preprocessing from the original source data, obtain the GSE2034 expression and clinical data files and place them in the expected data directory before running the preprocessing script.
-6. Dependencies
+6. Dependencies<br>
 The project uses Python libraries for data manipulation, statistical analysis, machine learning, and visualization. See requirements.txt for the complete list of dependencies.

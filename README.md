@@ -36,7 +36,7 @@ The project includes a publicly accessible Streamlit dashboard that allows users
 No installation or technical setup is required.
 
 ### Reproducibility and Technical Setup
-This section provides instructions for reproducing the data preprocessing workflow and running the interactive dashboard locally.
+This section provides instructions for reproducing the data preprocessing workflow and running the interactive dashboard locally. <br>
 ** Prerequisites **
 - Python 3.9 or later
 - Git

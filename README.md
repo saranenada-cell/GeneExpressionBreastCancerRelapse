@@ -28,14 +28,14 @@ The project has two main components:
 
 
 ## Getting Started:
-###Explore the Interactive Dashboard
+### Explore the Interactive Dashboard
 The project includes a publicly accessible Streamlit dashboard that allows users to explore breast cancer gene-expression data and investigate patterns associated with relapse.
 
 **[Launch the Interactive Dashboard](https://gse2034-breast-cancer-relapse.streamlit.app/)**
 
 No installation or technical setup is required.
 
-###Running the project locally (for technical reviewers)
+### Running the project locally (for technical reviewers)
 - Python 3.9 or later
 - Git
 - Code editor (such as VS code)

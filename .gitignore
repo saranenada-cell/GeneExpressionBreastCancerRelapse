@@ -13,4 +13,5 @@ __pycache__/
 
 # Local data files (optional)
 data/*.csv
+!data/dashboard_dataset.csv
 data/*.txt

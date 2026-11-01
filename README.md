@@ -20,8 +20,12 @@ Source: Kaggle dataset containing a copy of the GSE2034 breast cancer gene-expre
 - Clinical Information: Relapse status, time to relapse or last follow-up, lymph-node status, ER status, and other recurrence-related variables
 - License: CC0 1.0 Universal (public domain dedication)
 
-### Background
-Gene expression profiling allows researchers to examine patterns of gene activity across thousands of measurements. These patterns may contain information associated with clinical outcomes and prognosis. However, gene expression data is high dimensional, with the dataset in this project containing over 22k probes(features). This poses several analytical challenges, many more features than samples, class imbalance, correlated predictors, and risk of overfitting. This project explores approaches for addressing these challenges while evaluating the potential predictive value of gene expression data.
+### Research Objective
+The primary objective of this project is to investigate gene-expression patterns associated with breast cancer relapse and evaluate the potential of machine-learning approaches to predict relapse using gene-expression data. <br>
+The project has two main components:
+1. Exploratory Data Analysis: This includes examining the dataset and it's distribution of gene expression, exploring clinical characteristics, and identifying gene-expression probes associated with differences in relapse. This project will also apply statistical testing and multiple testing correction to evaluate differential gene expression. An interactive is developed to support exploration of gene-expression patterns and associated clinical outcomes.
+2. Predictive Modelling and External Validation: This includes applying feature selection techniques to identify informative gene-expression features, developing a classifier, evaluating the models performance, and asesssing generalizability using an external and independent dataset.
+
 
 ### Data Source and Licensing
 This project uses the GSE2034 breast cancer gene-expression dataset, obtained from the Kaggle dataset Breast Cancer Gene Expression Dataset (GSE2034), which is marked CC0 1.0 Public Domain on Kaggle.

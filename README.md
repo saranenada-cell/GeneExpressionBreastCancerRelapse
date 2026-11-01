@@ -2,12 +2,11 @@
 
 **[View Live Interactive Dashboard](https://gse2034-breast-cancer-relapse.streamlit.app/)**
 
-**Project Status:** In Progress
 ## Project Overview
-This project investigates whether gene expression can help distinguish breast cancer patients who experienced relapse from those who did not. Using the publicaly available GSE2034 dataset, the project applies statistical analysis and machine learning techniques to develop and evaluate a predictive model on it's ability to predict relapse versus relapse free based on gene expression values. <br>
+This project explores gene expression patterns associated with breast cancer relapse using the GSE2034 microarray dataset. The goal is to investigate differences in gene expression between patients with and without relapse and provide an interactive tool for exploring these patterns.
 
-This project focuses on data preprocessing, exploratory data analysis, machine learning feature selection, and predictive model evaluation. It also considers the challenge of applying the predictive model to independent patient cohorts.
-Repository for analysis and predictive model development for evaluating gene expressions and their relationships to breast cancer relapse.
+The project includes data preprocessing, exploratory data analysis, statistical testing, and an interactive Streamlit dashboard. The dashboard allows users to examine gene annotations, compare expression levels across relapse groups, and explore statistically significant differences.
+**Project Status:** In Progress
 
 ### Research Question
 Can a machine learning model trained on gene expression data from the GSE2034 breast cancer cohort predict relapse status, and how well does this predictive performance generalize to an independent dataset?

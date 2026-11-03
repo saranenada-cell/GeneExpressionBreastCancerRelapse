@@ -236,8 +236,9 @@ else:
     is_significant = gene_probes.iloc[0]["Significant"]
 
     st.divider()
-    st.subheader("Statistical Significance")
+    st.subheader("Statistical Results")
 
+    # Significance
     if is_significant:
         st.success(
             f"Statistically significant "
@@ -249,14 +250,25 @@ else:
             f"(FDR-adjusted p-value = {adjusted_p:.4e})"
         )
 
+    # Direction of expression difference
+    if mean_difference > 0:
+        direction = "Higher expression in the relapse group"
+    elif mean_difference < 0:
+        direction = "Higher expression in the no-relapse group"
+    else:
+        direction = "Equal mean expression between groups"
+
+    st.markdown(f"**Direction:** {direction}")
+
     st.write(
         f"**Mean expression difference:** {mean_difference:.3f} "
         "(Relapse − No relapse)"
     )
 
     st.caption(
-        "Significance is defined as a Benjamini–Hochberg "
-        "adjusted p-value below 0.05."
+        "Statistical significance is defined as a Benjamini–Hochberg "
+        "adjusted p-value below 0.05. Direction describes the difference "
+        "in group means, not a causal relationship."
     )
 
     # Extract expression values

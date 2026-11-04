@@ -15,4 +15,5 @@ __pycache__/
 data/*.csv
 !data/dashboard_dataset.csv
 !data/GSE2034_family_platform_GPL96_annotation.csv
+!data/differential_expression_results.csv
 data/*.txt

@@ -19,6 +19,30 @@ de_results = pd.read_csv(
 )
 
 # ----------------------------------
+# Page Development Notice
+# ----------------------------------
+
+with st.container(border=True):
+    st.markdown("### 🚧 This page is a work in progress!")
+
+    st.write(
+        "Currently, you can explore the volcano plot to see "
+        "which genes are associated with breast cancer relapse "
+        "and view the differential expression results in the table below."
+    )
+
+    st.markdown("**Coming soon:**")
+    st.write(
+        "- Explore gene expression by other patient characteristics, "
+        "including ER status."
+    )
+    st.write(
+        "- Investigate associations with time to relapse and survival."
+    )
+    st.write(
+        "- Explore the biological functions and pathways of significant genes."
+    )
+# ----------------------------------
 # Adding gene-expression summary
 # ----------------------------------
 
@@ -167,6 +191,7 @@ st.dataframe(
     }
 )
 
+
 # ----------------------------------
 # Gene Explorer
 # ----------------------------------
@@ -175,7 +200,6 @@ dashboard_dataset = pd.read_csv(
     "data/dashboard_dataset.csv"
 )
 
-# Individual Gene Explorer
 st.subheader("Individual Gene Explorer")
 
 st.write(
@@ -238,7 +262,6 @@ else:
     st.divider()
     st.subheader("Statistical Results")
 
-    # Significance
     if is_significant:
         st.success(
             f"Statistically significant "
@@ -271,7 +294,13 @@ else:
         "in group means, not a causal relationship."
     )
 
-    # Extract expression values
+    # ----------------------------------
+    # Relapse Expression Plot
+    # ----------------------------------
+
+    st.divider()
+    st.subheader("Gene Expression by Relapse Status")
+
     expression_df = dashboard_dataset[
         ["Relapse", selected_probe]
     ].copy()
@@ -281,7 +310,6 @@ else:
         1: "Relapse"
     })
 
-    # Expression comparison plot
     fig = px.box(
         expression_df,
         x="Relapse Group",
@@ -305,4 +333,10 @@ else:
         yaxis_title="Gene expression (log2)"
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(
+        fig,
+        use_container_width=True,
+        key="relapse_expression_chart"
+    )
+
+

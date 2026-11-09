@@ -17,3 +17,4 @@ data/*.csv
 !data/GSE2034_family_platform_GPL96_annotation.csv
 !data/differential_expression_results.csv
 data/*.txt
+data/raw_cel_zipped/cel/extracted/*

@@ -32,12 +32,19 @@ prediction_page = st.Page(
     icon="🤖"
 )
 
+research_page = st.Page(
+    "pages/5_Research.py",
+    title="Research Questions & Findings",
+    icon="🔬"
+)
+
 # Create navigation
 navigation = st.navigation([
     cohort_page,
     expression_page,
     survival_page,
-    prediction_page
+    prediction_page,
+    research_page
 ])
 
 navigation.run()

@@ -397,7 +397,7 @@ st.divider()
 # 4. ER and Predictive Performance
 # --------------------------------------------------
 
-st.header("4. ER Status and Relapse Prediction")
+st.header("4. ER Status and Predictive Performance")
 
 st.subheader(
     "Does including ER status improve our ability to predict relapse?"
@@ -413,6 +413,22 @@ Compare machine-learning models using:
 - Gene expression alone.
 - Gene expression combined with ER status.
 - ER status alone.
+
+Model performance will be evaluated using ROC-AUC,
+balanced accuracy, sensitivity, and specificity.
+""")
+
+st.subheader(
+    "How can we improve the Models Performance"
+)
+st.markdown("""
+**Potential Approaches**
+
+Compare machine-learning models using:
+
+- ER status as predictor.
+- RFE for feature selection.
+- Elastic Net Logistic Regression
 
 Model performance will be evaluated using ROC-AUC,
 balanced accuracy, sensitivity, and specificity.

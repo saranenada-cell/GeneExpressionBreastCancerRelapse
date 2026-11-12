@@ -28,7 +28,7 @@ output_dir <- file.path(
   "processed"
 )
 
-# Create output directory if necessary
+# Create output directory 
 dir.create(
   output_dir,
   recursive = TRUE,

@@ -16,6 +16,10 @@ data/*.csv
 !data/dashboard_dataset.csv
 !data/GSE2034_family_platform_GPL96_annotation.csv
 !data/differential_expression_results.csv
+!data/differential_expression_results.csv
+!data/ER_positive_differential_expression.csv
+!data/ER_negative_differential_expression.csv
+!data/gene_level_results_clean.csv
 data/*.txt
 data/raw_cel_zipped/cel/extracted/*
 data/genomic.gff

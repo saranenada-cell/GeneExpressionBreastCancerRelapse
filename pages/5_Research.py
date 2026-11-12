@@ -142,6 +142,73 @@ def create_chromosome_plot(df):
     return fig
 
 
+def create_er_correlation_plot(er_positive, er_negative):
+
+    # Select the 134 significant ER-positive probes
+    positive_sig = er_positive[
+        er_positive["Significant"].astype(str).str.lower() == "true"
+    ][["Probe_ID", "Mean_Difference"]].copy()
+
+    # Match those same probes in the ER-negative results
+    negative_results = er_negative[
+        ["Probe_ID", "Mean_Difference"]
+    ].copy()
+
+    # Merge using Probe_ID
+    comparison = positive_sig.merge(
+        negative_results,
+        on="Probe_ID",
+        suffixes=("_ER_Positive", "_ER_Negative")
+    )
+
+    # Calculate Pearson correlation
+    correlation = comparison[
+        "Mean_Difference_ER_Positive"
+    ].corr(
+        comparison["Mean_Difference_ER_Negative"]
+    )
+
+    # Determine common axis limits for the reference line
+    min_value = comparison[
+        ["Mean_Difference_ER_Positive", "Mean_Difference_ER_Negative"]
+    ].min().min()
+
+    max_value = comparison[
+        ["Mean_Difference_ER_Positive", "Mean_Difference_ER_Negative"]
+    ].max().max()
+
+    # Create interactive scatter plot
+    fig = px.scatter(
+        comparison,
+        x="Mean_Difference_ER_Positive",
+        y="Mean_Difference_ER_Negative",
+        hover_data=["Probe_ID"],
+        title=f"ER+ vs ER− Expression Differences (r = {correlation:.3f})",
+        labels={
+            "Mean_Difference_ER_Positive": "Mean Difference (ER-positive)",
+            "Mean_Difference_ER_Negative": "Mean Difference (ER-negative)"
+        }
+    )
+
+    # Add diagonal reference line (identical effect sizes)
+    fig.add_shape(
+        type="line",
+        x0=min_value,
+        y0=min_value,
+        x1=max_value,
+        y1=max_value,
+        line=dict(color="red", dash="dash", width=2)
+    )
+
+    fig.update_layout(
+        template="plotly_white",
+        height=450,
+        margin=dict(l=20, r=20, t=60, b=20)
+    )
+
+    return fig
+
+
 st.title("Research Questions & Findings")
 
 st.markdown("""
@@ -202,6 +269,43 @@ Relapse-associated differential expression was detected in the
 ER-positive subgroup, but not in the ER-negative subgroup.
 The smaller ER-negative sample size may have limited statistical power.
 """)
+
+st.markdown("#### Consistency of expression patterns across ER subgroups")
+
+col1, col2 = st.columns([1.3, 1])
+
+with col1:
+    fig_correlation = create_er_correlation_plot(
+        er_positive,
+        er_negative
+    )
+
+    st.plotly_chart(
+        fig_correlation,
+        use_container_width=True
+    )
+
+with col2:
+    st.markdown("""
+    
+    **Approach**
+    There are no significant probes in the ER- subgroup, however it would be interesting to see how the signficant probes in the ER+ group behave in the ER- group.
+
+    **Findings**
+
+    - Probes compared: 134
+    - Pearson correlation: 0.763
+    - Same direction in ER−:
+        - 87 higher in relapse
+        - 47 higher in no relapse
+    - Opposite directions: 0
+
+    **Interpretation**
+
+    The positive correlation suggests that relapse-associated expression patterns are broadly consistent across ER subgroups. AKA when that probe is high in expression in the ER+ group, it also seems to be high in the ER- group.
+
+    However, this does not establish statistical significance in ER-negative patients or prove identical biological effects. 
+    """)
 
 st.divider()
 
